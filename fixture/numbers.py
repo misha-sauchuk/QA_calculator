@@ -1,6 +1,5 @@
 
 
-
 class NumberHelper():
 
     def __init__(self, app):
