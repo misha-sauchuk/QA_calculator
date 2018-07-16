@@ -8,5 +8,6 @@
   "test_display_digit.py::test_display_digit[6]",
   "test_display_digit.py::test_display_digit[7]",
   "test_display_digit.py::test_display_digit[8]",
-  "test_display_digit.py::test_display_digit[9]"
+  "test_display_digit.py::test_display_digit[9]",
+  "test_display_digit.py::test_display_digit[.]"
 ]

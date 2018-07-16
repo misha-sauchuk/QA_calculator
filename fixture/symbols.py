@@ -1,11 +1,11 @@
-class NumberHelper():
+class SymbolHelper():
 
     def __init__(self, app):
         self.app = app
 
-    def add_one_digit(self, number):
+    def add_one_symbol(self, symbol):
         wd = self.app.wd
-        path = "//ul[@class='digits']//li[.='{}']".format(number.digit)
+        path = "//ul[@class='operations']//li[.='{}']".format(symbol.symbol)
         wd.find_element_by_xpath(path).click()
 
     def display_text(self):
