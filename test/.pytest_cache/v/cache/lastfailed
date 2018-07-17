@@ -1,9 +1,0 @@
-{
-  "division_by_zero.py": true,
-  "test_display_digit.py::test_display_digit[.]": true,
-  "test_display_digit.py::test_display_digit[0.]": true,
-  "test_display_symbol.py::test_display_symbol[+]": true,
-  "test_display_symbol.py::test_display_symbol[-]": true,
-  "test_display_symbol.py::test_display_symbol[/]": true,
-  "test_display_symbol.py::test_display_symbol[x]": true
-}
