@@ -1,4 +1,4 @@
-# QA_calculator is program to carry out the first three test for web interface of the calculator
+# QA_calculator is program to carry out the first three tests for web interface of the calculator
 
 to run this program you should follow next steps:
   - clone this repository
