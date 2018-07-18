@@ -1,13 +1,14 @@
 language: python
 python:
   - "3.5"
-# command to install dependencies
+before_install:
  - travis_retry gem update --syste
  - travis_retry gem install bundler
  - wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
  - mkdir geckodriver
  - tar -xzf geckodriver*.tar.gz -C geckodriver
  - export PATH=$PATH:$PWD/geckodriver
+# command to install dependencies
 install:
   - pip install -r requirements.txt
   - travis_retry bundle install
