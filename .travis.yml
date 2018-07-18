@@ -1,17 +1,21 @@
 language: python
 python:
   - "3.5"
-before_install:
-- wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
-- mkdir geckodriver
-- tar -xzf geckodriver-v0.11.1-linux64.tar.gz -C geckodriver
-- export PATH=$PATH:$PWD/geckodriver
-# command to install dependencies
+addons: # get google-chrome-stable
+  chrome: stable
+install: # Install ChromeDriver (64bits; replace 64 with 32 for 32bits).
+
 install:
   - pip install -r requirements.txt
-  - travis_retry bundle install
-  - bundle install
+  - wget -N http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip -P ~/
+  - unzip ~/chromedriver_linux64.zip -d ~/
+  - rm ~/chromedriver_linux64.zip
+  - sudo mv -f ~/chromedriver /usr/local/share/
+  - sudo chmod +x /usr/local/share/chromedriver
+  - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver# command to install dependencies
 # command to run tests
 script:
   - py.test # or py.test for Python versions 3.5 and below
+  - whereis google-chrome-stable
+  - whereis chromedriver
 
