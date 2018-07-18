@@ -7,7 +7,7 @@ class Application:
 
     def __init__(self):
         #self.wd = webdriver.Firefox()
-        self.wd = webdriver.Chrome('/usr/lib/chromium-browser/chromedriver')
+        self.wd = webdriver.Chrome('/usr/bin')
         self.wd.implicitly_wait(5)
         self.number = NumberHelper(self)
         self.symbol = SymbolHelper(self)
